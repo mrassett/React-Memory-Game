@@ -1,9 +1,12 @@
 import React from "react";
 import "./Header.css";
+// import Score from "../Score"
 
 const Header = props => (
-    
-<h1 className="header">{props.children}</h1>
+<div className="header">
+<div className="title">{props.children}</div>
+<div className="score">Score:{props.score}</div>
+</div>
 );
 
 export default Header;

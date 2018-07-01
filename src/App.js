@@ -6,38 +6,70 @@ import Score from "./components/Score/Score";
 import friends from "./friends.json";
 import './App.css';
 
-const App = () => (
-  <Wrapper>
-    <Header>Millenial Memory</Header>
-    <Card
-      image={friends[0].image}
-    />  
-    <Card
-      image={friends[1].image}
-    />
-    <Card
-      image={friends[2].image}
-    />
+//function for clickcount
+//function for newgame
+
+
+class App extends React.Component{
+  state = {
+    friends,
+    count: 0,
+    highscore: 0
+  };
+  handleIncrement = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+
+  render() {
+    return(
+      <Wrapper>
+      <Header score={this.state.score}>Millenial Memory</Header>
+  
       <Card
-      image={friends[3].image}
-    />
+        image={friends[0].image}
+        className="card" onClick={this.handleIncrement}
+      />  
       <Card
-      image={friends[4].image}
-    />
+        image={friends[1].image}
+        className="card" onClick={this.handleIncrement}
+      />
       <Card
-      image={friends[5].image}
-    />
-      <Card
-      image={friends[6].image}
-    />
-      <Card
-      image={friends[7].image}
-    />
-      <Card
-      image={friends[8].image}
-    />
-  </Wrapper>
-);
+        image={friends[2].image}
+        className="card" onClick={this.handleIncrement}
+      />
+        <Card
+        image={friends[3].image}
+        className="card" onClick={this.handleIncrement}
+      />
+        <Card
+        image={friends[4].image}
+        className="card" onClick={this.handleIncrement}
+      />
+        <Card
+        image={friends[5].image}
+        className="card" onClick={this.handleIncrement}
+      />
+        <Card
+        image={friends[6].image}
+        className="card" onClick={this.handleIncrement}
+      />
+        <Card
+        image={friends[7].image}
+        className="card" onClick={this.handleIncrement}
+      />
+        <Card
+        image={friends[8].image}
+        className="card" onClick={this.handleIncrement}
+      />
+    </Wrapper>
+    )}
+
+
+}
+
+
+
 
 
 export default App;
