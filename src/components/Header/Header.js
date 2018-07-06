@@ -1,11 +1,11 @@
 import React from "react";
 import "./Header.css";
-// import Score from "../Score"
+import Card from "../Card"
 
 const Header = props => (
 <div className="header">
 <div className="title">{props.children}</div>
-<div className="score">Score:{props.score}</div>
+{/* <div className="score">Score:{props.score}</div> */}
 </div>
 );
 

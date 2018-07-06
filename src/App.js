@@ -16,16 +16,26 @@ class App extends React.Component{
     count: 0,
     highscore: 0
   };
-  handleIncrement = () => {
-    this.setState({ count: this.state.count + 1 });
+  handleIncrement = id => {
+    // this.setState({ count: this.state.count + 1 });
+  this.state.friends.find((one, two) => {
+    if (one.count === id){
+      if(friends[id].count === 0){
+        friends[id].count = friends[id].count + 1;
+        this.setState({score: this.state.score + 1})
+      }
+    }
+
+  })
+  
   };
 
 
   render() {
     return(
       <Wrapper>
-      <Header score={this.state.score}>Millenial Memory</Header>
-  
+      <Header score={this.state.score}>Millenial Memory
+      <div><p className="score">Score:{this.state.count}</p></div></Header>
       <Card
         image={friends[0].image}
         className="card" onClick={this.handleIncrement}
