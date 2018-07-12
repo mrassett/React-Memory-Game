@@ -1,8 +1,10 @@
 .header {
     width: 100%;
     text-align: center;
-    font-size: 3rem;
-    color: #2A77AE;
-    margin-bottom: 50px;
-  }
+    font-size: 4rem;
+    font-weight: bolder;
+    color: black;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
   

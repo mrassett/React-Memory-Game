@@ -17,12 +17,12 @@ class App extends React.Component{
     highscore: 0
   };
   handleIncrement = id => {
-    // this.setState({ count: this.state.count + 1 });
+    this.setState({ count: this.state.count + 1 });
   this.state.friends.find((one, two) => {
     if (one.count === id){
       if(friends[id].count === 0){
         friends[id].count = friends[id].count + 1;
-        this.setState({score: this.state.score + 1})
+        // this.setState({score: this.state.score + 1}, function())
       }
     }
 
